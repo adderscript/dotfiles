@@ -1,0 +1,7 @@
+#!/bin/bash
+profile=$(powerprofilesctl get)
+case "$profile" in
+performance) echo "P" ;;
+power-saver) echo 'S' ;;
+*) echo 'B' ;;
+esac

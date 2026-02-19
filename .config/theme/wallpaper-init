@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+THEME_DIR="$HOME/.config/themes"
+
+set_wallpaper() {
+    local theme=$1
+    local wallpaper_dir="$THEME_DIR/$theme/wallpapers"
+    
+    if [[ -d "$wallpaper_dir" && -n "$(ls -A "$wallpaper_dir" 2>/dev/null)" ]]; then
+        local wallpaper=$(ls "$wallpaper_dir" | shuf -n1)
+        cp "$wallpaper_dir/$wallpaper" "$HOME/wallpapers/current.png"
+        
+        pkill swaybg || true
+        swaybg -i "$HOME/wallpapers/current.png" -m fill &
+        echo "Wallpaper set: $wallpaper (theme: $theme)"
+    else
+        echo "No wallpapers found in $wallpaper_dir"
+    fi
+}
+
+get_current_theme() {
+    local style_css="$HOME/.config/waybar/style.css"
+    if [[ -f "$style_css" ]]; then
+        grep -oP '@import "\.\/\K[^"]+' "$style_css" | head -1 | sed 's/\.css$//'
+    fi
+}
+
+if [[ "$1" == "--set-theme" ]]; then
+    set_wallpaper "$2"
+else
+    # Startup mode - detect current theme from waybar
+    local theme=$(get_current_theme)
+    if [[ -z "$theme" ]]; then
+        theme="rosepine"
+    fi
+    set_wallpaper "$theme"
+fi

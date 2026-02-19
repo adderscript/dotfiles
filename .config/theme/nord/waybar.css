@@ -1,0 +1,23 @@
+/*
+* Variant: Nord
+* Maintainer: arcticicestudio
+*/
+
+@define-color base            #2e3440;
+@define-color surface         #3b4252;
+@define-color overlay         #434c5e;
+
+@define-color muted           #4c566a;
+@define-color subtle          #616e88;
+@define-color text            #eceff4;
+
+@define-color love            #bf616a;
+@define-color gold            #ebcb8b;
+@define-color rose            #b48ead;
+@define-color pine            #a3be8c;
+@define-color foam            #88c0d0;
+@define-color iris            #81a1c1;
+
+@define-color highlightLow    #353b4f;
+@define-color highlightMed    #434c5e;
+@define-color highlightHigh   #4c566a;

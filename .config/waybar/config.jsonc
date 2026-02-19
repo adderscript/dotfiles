@@ -1,0 +1,72 @@
+/* -*- mode: jsonc -*- */
+{
+    "layer": "top",
+    "position": "top",
+    "exclusive": true,
+    "reload_on_style_change": true,
+
+    "height": 24,
+
+    "modules-left": ["niri/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "pulseaudio", "network", "custom/powerprofile", "battery"],
+
+    "tray": {
+        "spacing": 8
+    },
+
+    "niri/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "focused": ""
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%a %b %d}",
+        "tooltip-format": "{:%Y-%m-%d | %H:%M}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "{icon} {volume}%",
+		"format-icons": {
+			"default": [ "󰕿", "󰖀", "󰕾" ],
+			"default-muted": "󰝟",
+			"headphone": "󰋋",
+			"headphone-muted": "󰟎",
+			"headset": "󰋎",
+			"headset-muted": "󰋐"
+		},
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "format-wifi": "󰤨 ",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤭",
+        "on-click": "nm-connection-editor"
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-icons": {
+            "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        },
+        "on-click": "~/.config/waybar/scripts/cycle-power-profile"
+    },
+
+    "custom/powerprofile": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/power-profile",
+        "interval": 5,
+        "on-click": "~/.config/waybar/scripts/cycle-power-profile",
+        "tooltip": false
+    },
+}

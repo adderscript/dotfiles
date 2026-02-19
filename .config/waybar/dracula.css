@@ -1,0 +1,23 @@
+/*
+* Variant: Dracula
+* Maintainer: Dracula
+*/
+
+@define-color base            #282a36;
+@define-color surface         #383a4e;
+@define-color overlay         #44475a;
+
+@define-color muted           #6272a4;
+@define-color subtle          #7d85ba;
+@define-color text            #f8f8f2;
+
+@define-color love            #ff5555;
+@define-color gold            #f1fa8c;
+@define-color rose            #ff79c6;
+@define-color pine            #50fa7b;
+@define-color foam            #8be9fd;
+@define-color iris            #bd93f9;
+
+@define-color highlightLow    #424450;
+@define-color highlightMed    #44475a;
+@define-color highlightHigh   #6272a4;

@@ -1,0 +1,13 @@
+input {
+    keyboard {
+        xkb {
+            layout "gb"
+        }
+
+        numlock
+    }
+
+    touchpad {
+        tap
+    }
+}

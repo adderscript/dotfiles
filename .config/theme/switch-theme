@@ -1,0 +1,100 @@
+#!/usr/bin/env bash
+
+set -e
+
+THEME_DIR="$HOME/.config/themes"
+CONFIG_DIR="$HOME/.config"
+
+usage() {
+    echo "Usage: $0 <rosepine|dracula|nord>"
+    exit 1
+}
+
+switch_theme() {
+    local theme=$1
+    local theme_path="$THEME_DIR/$theme"
+
+    if [[ ! -d "$theme_path" ]]; then
+        echo "Error: Theme '$theme' not found"
+        exit 1
+    fi
+
+    echo "Switching to $theme..."
+
+    # Save current theme for persistence across reboots
+    echo "$theme" > "$THEME_DIR/.current-theme"
+
+    # Kitty
+    if [[ -f "$theme_path/kitty.conf" ]]; then
+        cp "$theme_path/kitty.conf" "$CONFIG_DIR/kitty/current-theme.conf"
+        echo "  ✓ Kitty"
+    fi
+
+    # Waybar
+    if [[ -f "$theme_path/waybar.css" ]]; then
+        # Update the @import in style.css
+        sed -i "s|@import \".*\.css\";|@import \"./$theme.css\";|" "$CONFIG_DIR/waybar/style.css"
+        cp "$theme_path/waybar.css" "$CONFIG_DIR/waybar/$theme.css"
+        
+        # Restart waybar
+        pkill waybar || true
+        sleep 0.2
+        waybar &
+        echo "  ✓ Waybar"
+    fi
+
+    # Mako
+    if [[ -f "$theme_path/mako.conf" ]]; then
+        cp "$theme_path/mako.conf" "$CONFIG_DIR/mako/config"
+        # Reload mako
+        pkill mako || true
+        mako &
+        echo "  ✓ Mako"
+    fi
+
+    # Fuzzel
+    if [[ -f "$theme_path/fuzzel.ini" ]]; then
+        cp "$theme_path/fuzzel.ini" "$CONFIG_DIR/fuzzel/fuzzel.ini"
+        echo "  ✓ Fuzzel"
+    fi
+
+    # GTK Theme via gsettings (works on Wayland)
+    case $theme in
+        rosepine)
+            gtk_theme="rose-pine-gtk"
+            icon_theme="rose-pine"
+            ;;
+        dracula)
+            gtk_theme="Adwaita-dark"
+            icon_theme="Adwaita"
+            ;;
+        nord)
+            gtk_theme="Adwaita-dark"
+            icon_theme="Adwaita"
+            ;;
+    esac
+    
+    gsettings set org.gnome.desktop.interface gtk-theme "$gtk_theme"
+    gsettings set org.gnome.desktop.interface icon-theme "$icon_theme"
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    echo "  ✓ GTK"
+
+    # Wallpaper - use wallpaper-init to pick random from theme's wallpapers folder
+    local wallpaper_dir="$theme_path/wallpapers"
+    if [[ -d "$wallpaper_dir" && -n "$(ls -A "$wallpaper_dir" 2>/dev/null)" ]]; then
+        # Update waybar style.css first so wallpaper-init can detect current theme
+        "$THEME_DIR/wallpaper-init" --set-theme "$theme"
+        echo "  ✓ Wallpaper"
+    fi
+
+    echo "Done! Theme switched to $theme"
+}
+
+case $1 in
+    rosepine|dracula|nord)
+        switch_theme "$1"
+        ;;
+    *)
+        usage
+        ;;
+esac
