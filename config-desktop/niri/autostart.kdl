@@ -1,0 +1,5 @@
+spawn-at-startup "waybar"
+spawn-at-startup "mako"
+spawn-sh-at-startup "~/.config/themes/switch-theme $(cat ~/.config/themes/.current-theme 2>/dev/null || echo dracula)"
+spawn-sh-at-startup "swaybg -m --fill -i ~/wallpapers/arch.png"
+spawn-sh-at-startup "dropbox start -i"

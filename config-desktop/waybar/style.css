@@ -1,0 +1,64 @@
+@import "./dracula.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 10px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @base;
+    color: @text;
+    padding: 4px 6px;
+}
+
+#workspaces {
+    padding: 6px 6px;
+    border-radius: 20px;
+}
+
+#workspaces button {
+    background: @overlay;
+    min-width: 25px;
+    min-height: 3px;
+    margin: 0 2px;
+    padding: 0;
+    border-radius: 20px;
+    font-size: 0;
+}
+
+#workspaces button.active {
+    background: @iris;
+    min-width: 35px;
+}
+
+#tray {
+    margin: 0 4px;
+    padding: 3px 3px;
+    border-radius: 20px;
+}
+
+
+#clock {
+    color: @text;
+    padding: 3px 12px;
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+#pulseaudio {
+    color: @text;
+    padding: 4px 8px;
+    margin: 0 4px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+#network {
+    color: @text;
+    padding: 0px 0px;
+    margin: 0px 16px 0 8px;
+    font-size: 14px;
+}

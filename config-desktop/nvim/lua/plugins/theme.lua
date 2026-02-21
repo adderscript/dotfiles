@@ -1,0 +1,1 @@
+/home/adderscript/.config/omarchy/current/theme/neovim.lua

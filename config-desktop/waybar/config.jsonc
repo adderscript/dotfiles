@@ -1,0 +1,54 @@
+/* -*- mode: jsonc -*- */
+{
+    "layer": "top",
+    "position": "top",
+    "exclusive": true,
+    "reload_on_style_change": true,
+
+    "height": 24,
+
+    "modules-left": ["niri/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "pulseaudio", "network"],
+
+    "tray": {
+        "spacing": 8
+    },
+
+    "niri/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "focused": ""
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%a %b %d}",
+        "tooltip-format": "{:%Y-%m-%d | %H:%M}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "{icon} {volume}%",
+		"format-icons": {
+			"default": [ "󰕿", "󰖀", "󰕾" ],
+			"default-muted": "󰝟",
+			"headphone": "󰋋",
+			"headphone-muted": "󰟎",
+			"headset": "󰋎",
+			"headset-muted": "󰋐"
+		},
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "format-wifi": "󰤨 ",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤭",
+        "on-click": "nm-connection-editor"
+    },
+}
