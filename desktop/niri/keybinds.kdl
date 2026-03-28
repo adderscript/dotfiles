@@ -1,9 +1,10 @@
 binds {
-    Mod+Return hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
-    Mod+E hotkey-overlay-title="Open File Manager: yazi" { spawn-sh "kitty -e yazi"; }
+    Mod+Return hotkey-overlay-title="Open Terminal: foot" { spawn "foot"; }
+    Mod+E hotkey-overlay-title="Open File Manager: nautilus" { spawn "nautilus"; }
     Mod+B hotkey-overlay-title="Open browser: zen" { spawn "zen-browser"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+N hotkey-overlay-title="Open Editor: neovim" { spawn-sh "kitty -e nvim"; }
+    Mod+M hotkey-overlay-title="Open Music Player: spotify" { spawn "spotify"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
@@ -119,9 +120,8 @@ binds {
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+M { maximize-column; }
+    Mod+Shift+F { maximize-column; }
     Mod+F { fullscreen-window; }
-    Mod+Ctrl+F { expand-column-to-available-width; }
 
     Mod+C { center-column; }
 

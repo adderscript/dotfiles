@@ -5,7 +5,12 @@ window-rule {
 
 window-rule {
     match app-id="kitty"
-    opacity 0.9
+    opacity 0.85
+}
+
+window-rule {
+    match app-id="foot"
+    opacity 0.85
 }
 
 window-rule {
