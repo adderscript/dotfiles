@@ -1,7 +1,7 @@
 prefer-no-csd
 
 layout {
-    gaps 4
+    gaps 6
     center-focused-column "never"
 
     preset-column-widths {
@@ -24,8 +24,8 @@ layout {
         on
 
         width 3
-        active-color "#bd93f9"
-        inactive-color "#505050"
+        active-color "#ddb6f2"
+        inactive-color "#5d5652"
         urgent-color "#9b0000"
     }
 }
