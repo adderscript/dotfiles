@@ -6,6 +6,7 @@ window-rule {
 
 window-rule {
     match app-id="foot"
+    match app-id="thunar"
     opacity 0.9
 }
 
@@ -15,7 +16,7 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 0
+    geometry-corner-radius 8
     clip-to-geometry true
     draw-border-with-background false
 }
