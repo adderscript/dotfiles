@@ -1,0 +1,81 @@
+// -*- mode: jsonc -*-
+{
+    "include": [
+        "~/.config/waybar/modules/*.jsonc"
+    ],
+
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 28, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    "reload_style_on_change": true,
+
+    "modules-left": [
+        "niri/workspaces",
+    ],
+    "modules-center": [
+        "clock#time",
+    ],
+    "modules-right": [
+        "group/pulseaudio",
+        "bluetooth",
+        "backlight",
+        "custom/battery",
+    ],
+
+    // Modules configuration
+    "tray": {
+        "icon-size": 15,
+        "spacing": 5
+    },
+
+    "clock#time": {
+        "interval": 60,
+        "format": "{:%a %H:%M <span color='#aaaaaa'>(%Z)</span>}", // 24h
+        // "format": "{:%I:%M %p <span color='#aaaaaa'>(%Z)</span>}" // 12h
+        "tooltip-format": "{tz_list}",
+        "timezones" : [
+            "Europe/London",
+            "Asia/Tokyo",
+            "Asia/Singapore",
+            "Asia/Bangkok",
+            "Asia/Shanghai",
+            "America/New_York",
+            "America/Los_Angeles"
+        ],
+        "actions": {
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down"
+        }
+    },
+   
+    "clock#date": {
+        // "timezone": "America/New_York",
+        "format": "{:%a %d %b}", // 24-hour
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 2,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#633aff'><b>{}</b></span>",
+                "weeks":      "<span color='#61E2FF'><b>W{}</b></span>",
+                "today":      "<span color='#f53fa1'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "<b>{icon}</b> {percent}",
+        "format-icons": ["/--", "//-", "///"],
+      	"tooltip-format": "Brightness: {percent}%\nClick to toggle Night Light",
+        "on-click": "~/.local/bin/night-light"
+    },
+
+    "custom/battery": {
+        "format": "󰁹 100%"
+    }
+}
