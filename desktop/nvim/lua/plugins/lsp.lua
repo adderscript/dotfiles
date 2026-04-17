@@ -6,10 +6,11 @@ return {
         pyright = {},
         ts_ls = {},
         astro = {},
+        omnisharp = {},
         gopls = {},
         rust_analyzer = {},
         clangd = {},
-      }
-    }
-  }
+      },
+    },
+  },
 }
