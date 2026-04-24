@@ -5,7 +5,6 @@ computer=$1
 rm -rf ~/dotfiles/.config/*
 
 rsync -a ~/.config/niri ~/dotfiles/$computer
-rsync -a ~/.config/hypr ~/dotfiles/$computer
 rsync -a ~/.config/waybar ~/dotfiles/$computer
 rsync -a ~/.config/nvim ~/dotfiles/$computer
 rsync -a ~/.config/foot ~/dotfiles/$computer
