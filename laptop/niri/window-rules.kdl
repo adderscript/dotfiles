@@ -1,0 +1,22 @@
+window-rule {
+    match app-id="zen"
+    match app-id="Godot"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="foot"
+    match app-id="thunar"
+    opacity 0.9
+}
+
+window-rule {
+    match app-id="miniquad-application"
+    open-floating true
+}
+
+window-rule {
+    geometry-corner-radius 8
+    clip-to-geometry true
+    draw-border-with-background false
+}
