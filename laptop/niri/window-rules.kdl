@@ -7,7 +7,19 @@ window-rule {
 window-rule {
     match app-id="foot"
     match app-id="thunar"
-    opacity 0.9
+    opacity 0.75
+}
+
+window-rule {
+    match app-id="foot"
+    match app-id="thunar"
+    match app-id="zen"
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+    }
 }
 
 window-rule {
@@ -19,4 +31,17 @@ window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
     draw-border-with-background false
+}
+
+layer-rule {
+    match namespace="waybar"
+
+    geometry-corner-radius 16
+    place-within-backdrop true
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+    }
 }

@@ -2,30 +2,40 @@ prefer-no-csd
 
 layout {
     gaps 6
-    center-focused-column "never"
-
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-    }
-
-    default-column-width { proportion 0.5; }
+    background-color "#151218"
 
     focus-ring {
         off
-        width 4
 
-        active-color "#7fc8ff"
-        inactive-color "#505050"
+        active-color "#d3bcfd"
+        inactive-color "#948f99"
+        urgent-color   "#ffb4ab"
     }
 
     border {
         on
-
         width 3
-        active-color "#b9bece"
-        inactive-color "#5e76c9"
-        urgent-color "#9b0000"
+
+        active-color   "#d3bcfd"
+        inactive-color "#948f99"
+        urgent-color   "#ffb4ab"
     }
+
+    shadow {
+        color "#00000070"
+    }
+
+    tab-indicator {
+        active-color   "#d3bcfd"
+        inactive-color "#948f99"
+        urgent-color   "#ffb4ab"
+    }
+
+    insert-hint {
+        color "#d3bcfd80"
+    }
+}
+
+overview {
+    backdrop-color "#151218"
 }

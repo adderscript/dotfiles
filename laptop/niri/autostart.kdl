@@ -1,4 +1,4 @@
 spawn-sh-at-startup "syncthing"
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
-spawn-sh-at-startup "swaybg -m --center -i ~/wallpapers/kiss-my-arch.png"
+spawn-sh-at-startup "swaybg -i ~/wallpapers/07.png"

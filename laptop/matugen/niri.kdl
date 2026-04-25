@@ -1,0 +1,41 @@
+prefer-no-csd
+
+layout {
+    gaps 6
+    background-color "{{colors.background.default.hex}}"
+
+    focus-ring {
+        off
+
+        active-color "{{colors.primary.default.hex}}"
+        inactive-color "{{colors.outline.default.hex}}"
+        urgent-color   "{{colors.error.default.hex}}"
+    }
+
+    border {
+        on
+        width 3
+
+        active-color   "{{colors.primary.default.hex}}"
+        inactive-color "{{colors.outline.default.hex}}"
+        urgent-color   "{{colors.error.default.hex}}"
+    }
+
+    shadow {
+        color "{{colors.shadow.default.hex}}70"
+    }
+
+    tab-indicator {
+        active-color   "{{colors.primary.default.hex}}"
+        inactive-color "{{colors.outline.default.hex}}"
+        urgent-color   "{{colors.error.default.hex}}"
+    }
+
+    insert-hint {
+        color "{{colors.primary.default.hex}}80"
+    }
+}
+
+overview {
+    backdrop-color "{{colors.background.default.hex}}"
+}

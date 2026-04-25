@@ -1,0 +1,22 @@
+[config]
+
+[config.wallpaper]
+set = true
+command = "swaybg -m stretch -i {{ image }}"
+
+[templates.waybar]
+input_path = '~/.config/matugen/waybar.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/fuzzel.ini'
+output_path = '~/.config/fuzzel/fuzzel.ini'
+
+[templates.niri]
+input_path = '~/.config/matugen/niri.kdl'
+output_path = '~/.config/niri/layout.kdl'
+
+[templates.mako]
+input_path = '~/.config/matugen/mako'
+output_path = '~/.config/mako/config'

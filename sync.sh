@@ -10,6 +10,7 @@ rsync -a ~/.config/nvim ~/dotfiles/$computer
 rsync -a ~/.config/foot ~/dotfiles/$computer
 rsync -a ~/.config/mako ~/dotfiles/$computer
 rsync -a ~/.config/fuzzel ~/dotfiles/$computer
+rsync -a ~/.config/matugen/ ~/dotfiles/$computer/matugen
 rsync -a ~/.config/fastfetch/ ~/dotfiles/$computer/fastfetch
 
 rsync -a ~/wallpapers/ ~/dotfiles/wallpapers/

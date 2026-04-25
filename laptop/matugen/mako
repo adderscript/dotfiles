@@ -6,9 +6,9 @@ border-radius=10
 
 font=JetBrainsMono Nerd Font 10
 
-background-color=#1b073a
-text-color=#e7e0e8
-border-color=#d3bcfd
+background-color={{base16.base0a.default.hex}}
+text-color={{colors.on_background.default.hex}}
+border-color={{colors.primary.default.hex}}
 
 [mode=do-not-disturb]
 invisible=1
@@ -18,4 +18,4 @@ on-notify=none
 on-notify=none
 
 [urgency=high]
-border-color=#93000a
+border-color={{colors.error_container.default.hex}}

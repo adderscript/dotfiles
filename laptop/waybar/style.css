@@ -1,4 +1,4 @@
-@import "./theme.css";
+@import "./colors.css";
 
 * {
     border: none;
@@ -10,7 +10,7 @@
 }
 
 window#waybar {
-    background-color: #152352;
+    background-color: transparent;
     color: @foreground;
 }
 
@@ -51,7 +51,7 @@ tooltip label {
     margin-bottom: 1px;
     min-width: 40px;
 
-    color: @color6;
+    color: @surface_tint;
 }
 
 #workspaces button.focused {
@@ -59,7 +59,6 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    background-color: @color1;
     color: @background;
 }
 
