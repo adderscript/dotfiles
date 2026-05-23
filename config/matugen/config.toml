@@ -1,0 +1,26 @@
+[config]
+
+[config.wallpaper]
+set = true
+command = "swaybg -i {{ image }}"
+
+[templates.waybar]
+input_path = '~/nixos-dotfiles/config/matugen/waybar.css'
+output_path = '~/nixos-dotfiles/config/waybar/colors.css'
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.fuzzel]
+input_path = '~/nixos-dotfiles/config/matugen/fuzzel.ini'
+output_path = '~/nixos-dotfiles/config/fuzzel/fuzzel.ini'
+
+[templates.niri]
+input_path = '~/nixos-dotfiles/config/matugen/niri.kdl'
+output_path = '~/nixos-dotfiles/config/niri/layout.kdl'
+
+[templates.mako]
+input_path = '~/nixos-dotfiles/config/matugen/mako'
+output_path = '~/nixos-dotfiles/config/mako/config'
+
+[templates.foot]
+input_path = '~/nixos-dotfiles/config/matugen/foot.ini'
+output_path = '~/nixos-dotfiles/config/foot/foot.ini'
