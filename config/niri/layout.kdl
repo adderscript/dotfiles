@@ -1,0 +1,42 @@
+prefer-no-csd
+
+layout {
+    gaps 8
+    background-color "#181825"
+
+    focus-ring {
+        off
+        width 2
+
+        active-color "#d2c4b4"
+        inactive-color "#9b8f80"
+        urgent-color   "#ffb4ab"
+    }
+
+    border {
+        on
+        width 2
+
+        active-color "#88ccfa"
+        inactive-color "#11111b"
+        urgent-color   "#ffb4ab"
+    }
+
+    shadow {
+        color "#00000070"
+    }
+
+    tab-indicator {
+        active-color   "#f1be6d"
+        inactive-color "#18130b"
+        urgent-color   "#ffb4ab"
+    }
+
+    insert-hint {
+        color "#f1be6d80"
+    }
+}
+
+overview {
+    backdrop-color "#181825"
+}
