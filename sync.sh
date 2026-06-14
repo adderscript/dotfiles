@@ -11,6 +11,7 @@ configsToSync=(
     "nvim"
     "foot"
     "fish"
+    "fuzzel"
     "niri"
     "waybar"
     "mako"
