@@ -1,0 +1,75 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "spacing": 4,
+
+    // Choose the order of the modules
+    "modules-left": [
+        "niri/workspaces",
+        "custom/sep",
+        "niri/window",
+        "custom/sep"
+    ],
+    "modules-center": [
+    ],
+
+    "modules-right": [
+        "custom/sep",
+        "tray",
+        "custom/sep",
+        "network",
+        "custom/sep",
+        "cpu",
+        "custom/sep",
+        "memory",
+        "custom/sep",
+        "clock",
+    ],
+
+    // Modules configuration
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "clock": {
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "Mem: {used}GiB"
+    },
+    "disk": {
+        "interval": 60,
+        "path": "/",
+        "format": "Disk: {free}"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "Bat: {capacity}% {icon} {time}",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "Bat {capacity}%",
+        "format-time": "{H}:{M}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format": "Online",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "custom/sep": {
+        "format" : "|",
+        "interval" : 0
+    }
+}
