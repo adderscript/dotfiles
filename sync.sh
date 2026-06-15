@@ -5,6 +5,7 @@ set -euo pipefail
 dotfilesDir="$HOME/dotfiles"
 configSource="$HOME/.config"
 configTarget="$dotfilesDir/config"
+wallpapersDir="$HOME/wallpapers"
 
 # 👇 Put only the configs you actually want tracked here
 configsToSync=(
@@ -17,7 +18,7 @@ configsToSync=(
     "mako"
 )
 
-echo "Syncing selected .config folders → dotfiles repo..."
+echo "Syncing selected .config folders -> dotfiles repo..."
 
 mkdir -p "$configTarget"
 
@@ -36,5 +37,7 @@ for configName in "${configsToSync[@]}"; do
         echo "⚠️  Skipping $configName (not found)"
     fi
 done
+
+echo "Syncing wallpapers -> dotfiles repo... # TO IMPLEMENT"
 
 echo "Done syncing selected configs."
