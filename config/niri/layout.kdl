@@ -5,15 +5,6 @@ layout {
     background-color "#181825"
 
     focus-ring {
-        off
-        width 2
-
-        active-color "#88ccfa"
-        inactive-color "#11111b"
-        urgent-color   "#ffb4ab"
-    }
-
-    border {
         on
         width 2
 
@@ -22,8 +13,22 @@ layout {
         urgent-color   "#ffb4ab"
     }
 
+    border {
+        off
+        width 2
+
+        active-color "#88ccfa"
+        inactive-color "#11111b"
+        urgent-color   "#ffb4ab"
+    }
+
     shadow {
-        color "#00000070"
+        on
+        softness 20
+        spread 5
+        offset x=0 y=5
+        draw-behind-window true
+        color "#00000088"
     }
 
     tab-indicator {
