@@ -8,8 +8,8 @@ layout {
         off
         width 2
 
-        active-color "#d2c4b4"
-        inactive-color "#9b8f80"
+        active-color "#88ccfa"
+        inactive-color "#11111b"
         urgent-color   "#ffb4ab"
     }
 

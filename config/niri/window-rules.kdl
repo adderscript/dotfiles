@@ -56,9 +56,23 @@ layer-rule {
 
     geometry-corner-radius 10
     place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="^launcher$"
 
     background-effect {
-        xray true
+        xray false
         blur true
+    }
+
+    shadow {
+        on
+        softness 40
+        spread 5
+        offset x=0 y=5
+        draw-behind-window true
+        color "#00000066"
+        // inactive-color "#00000064"
     }
 }

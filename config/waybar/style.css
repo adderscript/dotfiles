@@ -52,7 +52,7 @@ window#waybar {
 }
 
 #custom-sep {
-    color: @surface0;
+    color: @surface1;
 }
 
 #clock {
