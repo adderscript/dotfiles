@@ -42,6 +42,6 @@ done
 cp $configSource/starship.toml $configTarget
 
 echo "Syncing wallpapers -> dotfiles repo..."
-rsync -av --delete "$wallpapersDir/" "$configTarget"
+rsync -av --delete "$wallpapersDir/" "$dotfilesDir/wallpapers"
 
 echo "Done syncing selected configs."

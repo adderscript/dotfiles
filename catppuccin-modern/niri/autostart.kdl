@@ -1,0 +1,3 @@
+spawn-at-startup "waybar"
+spawn-at-startup "mako"
+spawn-sh-at-startup "swaybg -i wallpapers/25.png"

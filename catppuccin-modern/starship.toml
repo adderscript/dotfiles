@@ -1,0 +1,77 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = true
+
+format = """
+$username\
+$directory\
+$fill\
+$cmd_duration\
+$line_break\
+$character
+"""
+
+[username]
+show_always = true
+style_user = "bold #89B4FA"      # Blue
+style_root = "bold #F38BA8"      # Red
+format = "[$user]($style)[ in ](#CDD6F4)"
+
+[directory]
+style = "bold #A6E3A1"           # Green
+truncate_to_repo = false
+truncation_length = 8
+read_only = " "
+format = "[$path]($style) "
+
+[git_branch]
+symbol = " "
+style = "bold #F9E2AF"           # Yellow
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold #FAB387"           # Peach
+format = "([$all_status$ahead_behind]($style)) "
+
+[cmd_duration]
+min_time = 1000
+style = "bold #BAC2DE"           # Subtext
+format = "[took $duration]($style)"
+
+[fill]
+symbol = " "
+
+[character]
+success_symbol = "[❯](bold #89DCEB)"   # Sky
+error_symbol = "[❯](bold #F38BA8)"     # Red
+vimcmd_symbol = "[❮](bold #CBA6F7)"    # Mauve
+
+[hostname]
+disabled = true
+
+[package]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[rust]
+disabled = true
+
+[golang]
+disabled = true
+
+[c]
+disabled = true
+
+[lua]
+disabled = true
+
+[java]
+disabled = true
+
+[docker_context]
+disabled = true
