@@ -12,10 +12,11 @@ configsToSync=(
     "nvim"
     "foot"
     "fish"
-    "fuzzel"
+    "otter-launcher"
     "niri"
     "waybar"
     "mako"
+    "fastfetch"
 )
 
 echo "Syncing selected .config folders -> dotfiles repo..."
