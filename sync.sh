@@ -4,10 +4,10 @@ set -euo pipefail
 
 dotfilesDir="$HOME/dotfiles"
 configSource="$HOME/.config"
-configTarget="$dotfilesDir/config"
+configTarget="$dotfilesDir/$1"
 wallpapersDir="$HOME/wallpapers"
 
-# 👇 Put only the configs you actually want tracked here
+# Put only the configs you actually want tracked here
 configsToSync=(
     "nvim"
     "foot"
@@ -38,6 +38,10 @@ for configName in "${configsToSync[@]}"; do
     fi
 done
 
-echo "Syncing wallpapers -> dotfiles repo... # TO IMPLEMENT"
+# Specic thing for starship just because it has to be fucking special
+cp $configSource/starship.toml $configTarget
+
+echo "Syncing wallpapers -> dotfiles repo..."
+rsync -av --delete "$wallpapersDir/" "$configTarget"
 
 echo "Done syncing selected configs."
