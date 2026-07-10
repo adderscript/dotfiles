@@ -1,0 +1,85 @@
+@import 'rose-pine.css';
+
+* {
+    font-family: "JetBrains Mono NF", monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: alpha(@base, 0.85);
+    color: @text;
+}
+
+#workspaces {
+    margin: 0px 0px 0px 12px;
+}
+#workspaces button {
+    min-width: 0;
+    padding: 0px 10px;
+    color: @foam;
+    background: transparent;
+    border-bottom: 3px solid transparent;
+}
+#workspaces button.active {
+    color: @foam;
+    border-bottom: 3px solid @pine;
+    border-radius: 0px;
+}
+#workspaces button.empty {
+    color: @text;
+}
+#workspaces button.empty.active {
+    color: @foam;
+    border-bottom: 3px solid @pine;
+    border-radius: 0px;
+}
+
+#workspaces button.urgent {
+    background-color: @love;
+}
+
+#clock,
+#custom-sep,
+#battery,
+#cpu,
+#memory,
+#disk,
+#network,
+#tray {
+    padding: 0 8px;
+    color: @text;
+}
+
+#custom-sep {
+    color: @muted;
+}
+
+#clock {
+    color: @gold;
+    border-bottom: 3px solid @gold;
+    margin: 0px 12px 0px 0px;
+}
+
+#battery {
+    color: @love;
+    border-bottom: 3px solid @love;
+}
+
+#cpu {
+    color: @rose;
+    border-bottom: 3px solid @rose;
+}
+
+#network {
+    color: @iris;
+    border-bottom: 3px solid @iris;
+}
+
+#network.disconnected {
+    background-color: @love;
+}
+
+#tray {
+    border-bottom: 3px solid @muted;
+}

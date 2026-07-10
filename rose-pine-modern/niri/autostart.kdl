@@ -1,0 +1,4 @@
+spawn-at-startup "waybar"
+spawn-at-startup "mako"
+spawn-at-startup "swayosd-server"
+spawn-sh-at-startup "swaybg -i wallpapers/25.png"
