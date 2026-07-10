@@ -11,14 +11,13 @@
     "logo": {
         "source": "arch_small", // search for logos: fastfetch --list-logos or --print-logos
         "padding": {
-	        "top": 1
+            "left": 1,
 	},
     },
     "display": {
         "separator": "  "
     },
     "modules": [
-	"break",
 	"title",
         {
             "type": "os",

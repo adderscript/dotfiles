@@ -1,16 +1,13 @@
 binds {
     Mod+Return hotkey-overlay-title="Open Terminal: foot" { spawn "foot"; }
-    Mod+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
     Mod+B hotkey-overlay-title="Open browser: zen" { spawn "zen-browser"; }
-    Mod+Space hotkey-overlay-title="Run menu: otter-launcher" { spawn-sh "foot --app-id='launcher' -e otter-launcher"; }
-    Mod+D hotkey-overlay-title="Run an Application: otter-launcher" { spawn-sh "foot --app-id='launcher' -e otter-launcher app"; }
-    Mod+N hotkey-overlay-title="Open Editor: neovim" { spawn-sh "kitty -e nvim"; }
+    Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+M hotkey-overlay-title="Open Music Player: spotify" { spawn "spotify"; }
+    Mod+P hotkey-overlay-title="Toggle Bar: waybar" { spawn-sh "toggle-waybar.sh"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioRaiseVolume { spawn-sh "swayosd-client --output-volume raise"; }
+    XF86AudioLowerVolume { spawn-sh "swayosd-client --output-volume lower"; }
+    XF86AudioMute { spawn-sh "swayosd-client --output-volume mute-toggle"; }
 
     XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
     XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
@@ -147,6 +144,8 @@ binds {
 
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
+
+
 
     Mod+Shift+P { power-off-monitors; }
 }

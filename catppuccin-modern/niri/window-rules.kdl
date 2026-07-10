@@ -21,52 +21,15 @@ window-rule {
 }
 
 window-rule {
-    match app-id="launcher"
-
     match app-id="miniquad-application"
     match app-id="bevy-game"
     open-floating true
 }
 
 window-rule {
-    match app-id="launcher"
-
-    background-effect {
-        xray true
-        blur true
-    }
-}
-
-window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
     draw-border-with-background false
-
-    background-effect {
-        noise 0.0
-    }
-}
-
-window-rule {
-    match is-focused=true
-
-    shadow {
-        on
-        softness 40
-        spread 5
-        offset x=0 y=5
-        draw-behind-window true
-        color "#00000044"
-        // inactive-color "#00000064"
-    }
-}
-
-layer-rule {
-    match namespace="waybar"
-    match namespace="^launcher$"
-
-    geometry-corner-radius 10
-    place-within-backdrop true
 }
 
 layer-rule {
