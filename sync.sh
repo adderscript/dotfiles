@@ -12,7 +12,7 @@ configsToSync=(
     "nvim"
     "foot"
     "fish"
-    "otter-launcher"
+    "fuzzel"
     "niri"
     "waybar"
     "mako"
@@ -41,6 +41,9 @@ done
 
 # Specic thing for starship just because it has to be fucking special
 cp $configSource/starship.toml $configTarget
+
+# Another specific thing but for bash, I'm not angry because bash is aloud to be different
+cp $HOME/.bashrc $configTarget
 
 echo "Syncing wallpapers -> dotfiles repo..."
 rsync -av --delete "$wallpapersDir/" "$dotfilesDir/wallpapers"
