@@ -1,11 +1,12 @@
 return {
-    {
-        "neovim/nvim-lspconfig",
-        opts = {
-            servers = {
-                clangd = {},
-                rust_analyzer = {},
-            },
-        },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        clangd = {},
+        rust_analyzer = {},
+        ols = {},
+      },
     },
+  },
 }

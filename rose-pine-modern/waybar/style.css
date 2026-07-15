@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background-color: alpha(@base, 0.85);
+    background-color: alpha(@base, 0.875);
     color: @text;
 }
 
@@ -17,21 +17,21 @@ window#waybar {
 #workspaces button {
     min-width: 0;
     padding: 0px 10px;
-    color: @foam;
+    color: @gold;
     background: transparent;
     border-bottom: 3px solid transparent;
 }
 #workspaces button.active {
-    color: @foam;
-    border-bottom: 3px solid @pine;
+    color: @gold;
+    border-bottom: 3px solid @gold;
     border-radius: 0px;
 }
 #workspaces button.empty {
     color: @text;
 }
 #workspaces button.empty.active {
-    color: @foam;
-    border-bottom: 3px solid @pine;
+    color: @gold;
+    border-bottom: 3px solid @gold;
     border-radius: 0px;
 }
 

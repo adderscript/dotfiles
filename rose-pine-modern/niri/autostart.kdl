@@ -1,4 +1,4 @@
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
+spawn-sh-at-startup "swaybg -i ~/wallpapers/rose-pine/minecraft/snow-night-moon.png"
 spawn-at-startup "swayosd-server"
-spawn-sh-at-startup "swaybg -i wallpapers/rose-pine/photography/kainoa-kanter/bay.jpg"
