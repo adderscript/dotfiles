@@ -1,0 +1,4 @@
+spawn-at-startup "waybar"
+spawn-sh-at-startup "swaybg -i ~/wallpapers/nord/tower-nord.png"
+spawn-at-startup "mako"
+spawn-at-startup "swayosd-server"

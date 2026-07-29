@@ -16,6 +16,6 @@ return {
 
     close_on_exit = false,
 
-    shell = "/bin/bash",
+    shell = "/bin/sh",
   },
 }

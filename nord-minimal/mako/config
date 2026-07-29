@@ -1,0 +1,21 @@
+max-visible=5
+default-timeout=5000
+anchor=top-right
+margin=10,10,10
+border-radius=0
+
+font=JetBrainsMono Nerd Font 12
+
+background-color=#1f222d
+text-color=#c7bfb0
+border-color=#82a7c4
+
+[mode=do-not-disturb]
+invisible=1
+on-notify=none
+
+[mode=silent]
+on-notify=none
+
+[urgency=high]
+border-color=#93000a

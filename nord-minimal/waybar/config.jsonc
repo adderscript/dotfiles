@@ -1,0 +1,77 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "spacing": 4,
+
+    // Choose the order of the modules
+    "modules-left": [
+        "niri/workspaces",
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "network",
+        "battery",
+        "clock",
+    ],
+
+    // Modules configuration
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "clock": {
+        "format": " {:%H:%M} "
+    },
+    "cpu": {
+        "format": "CPU: {usage}%  ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "Mem: {used}GiB  "
+    },
+    "disk": {
+        "interval": 60,
+        "path": "/",
+        "format": "Disk: {free}  "
+    },
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%  ",
+        "format-full": "{icon} {capacity}%  ",
+        "format-charging": " {capacity}%  ",
+        "format-plugged": "  ",
+        "format-alt": "{icon} {time}  ",
+        "tooltip-format": "{timeTo}\n\n󰠠  Usage: {power:0.1f}W\n󱤅  Condition: {health}%\n󱍸  Total: {cycles} cycles  ",
+        "format-icons": {
+            "default": [
+                "󰂎",
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        }
+    },
+    "network": {
+        "max-length": 9,
+        "format": "  up  ",
+        "format-disconnected": "  Down  "
+    },
+}

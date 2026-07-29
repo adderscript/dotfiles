@@ -1,0 +1,70 @@
+@import 'nord.css';
+
+* {
+    font-family: "JetBrains Mono NF", monospace;
+    font-size: 15px;
+}
+
+window#waybar {
+    background-color: alpha(@background, 0.875);
+    color: @text;
+}
+
+#workspaces {
+    margin: 0px 0px 0px 12px;
+}
+#workspaces button {
+    min-width: 0;
+    padding: 0px 10px;
+    color: @accent;
+    background: transparent;
+    border-bottom: 3px solid transparent;
+}
+#workspaces button.active {
+    color: @accent;
+    border-bottom: 3px solid @accent;
+    border-radius: 0px;
+}
+#workspaces button.empty {
+    color: @text;
+}
+#workspaces button.empty.active {
+    color: @text;
+    border-bottom: 3px solid @accent;
+    border-radius: 0px;
+}
+
+#workspaces button.urgent {
+    background-color: @text;
+}
+
+#clock,
+#custom-sep,
+#battery,
+#cpu,
+#memory,
+#disk,
+#network,
+#tray {
+    padding: 3px 0px;
+    color: @text;
+}
+
+#clock {
+    color: @text;
+}
+
+#battery {
+    color: @text;
+}
+
+#cpu {
+    color: @text;
+}
+
+#network {
+    color: @text;
+}
+
+#tray {
+}
