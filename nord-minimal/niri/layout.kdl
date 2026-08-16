@@ -8,7 +8,7 @@ layout {
         on
         width 1.25
 
-        active-color "#85a6c7"
+        active-color "#7a808c"
         inactive-color "#191724"
         urgent-color   "#ffb4ab"
     }
@@ -24,11 +24,11 @@ layout {
 
     shadow {
         on
-        softness 5
+        softness 4
         spread 1
         offset x=0 y=0
         draw-behind-window false
-        color "#000000d8"
+        color "#000000d0"
         // inactive-color "#00000054"
     }
     

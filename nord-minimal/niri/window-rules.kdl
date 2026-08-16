@@ -15,7 +15,6 @@ window-rule {
     match app-id="zen"
 
     background-effect {
-        xray true
         blur true
     }
 }

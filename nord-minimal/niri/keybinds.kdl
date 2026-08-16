@@ -1,6 +1,7 @@
 binds {
     Mod+Return hotkey-overlay-title="Open Terminal: foot" { spawn "foot"; }
     Mod+B hotkey-overlay-title="Open browser: zen" { spawn "zen-browser"; }
+    Mod+E hotkey-overlay-title="Open File Browser: nautilus" { spawn-sh "nautilus -w"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+M hotkey-overlay-title="Open Music Player: spotify" { spawn "spotify"; }
     Mod+C hotkey-overlay-title="Check system info" { spawn-sh "~/bin/info.sh"; }
