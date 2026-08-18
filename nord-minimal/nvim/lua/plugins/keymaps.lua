@@ -10,6 +10,7 @@ vim.keymap.set("n", "<leader>r", function()
     cpp = "g++ " .. file .. " -o /tmp/a.out && /tmp/a.out",
     odin = "odin run .",
     rust = "cargo run",
+    cs = "dotnet run",
   }
 
   local cmd = commands[ft]

@@ -6,6 +6,7 @@ return {
         clangd = {},
         rust_analyzer = {},
         ols = {},
+        csharp_ls = {},
       },
     },
   },
