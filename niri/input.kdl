@@ -1,0 +1,18 @@
+input {
+    keyboard {
+        xkb {
+            layout "gb"
+        }
+
+        numlock
+    }
+
+    touchpad {
+        tap
+    }
+
+    mouse { }
+    trackpoint { }
+
+    focus-follows-mouse max-scroll-amount="0%"
+}

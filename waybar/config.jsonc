@@ -1,0 +1,56 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 16,
+    "spacing": 4,
+
+    // Choose the order of the modules
+    "modules-left": [
+        "niri/workspaces",
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "network",
+        "battery",
+        "clock",
+    ],
+
+    "clock": {
+        "format": "<span foreground='#bb7643'></span> {:%H:%M} "
+    },
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<span foreground='#bb7643'>{icon}</span> {capacity}%  ",
+        "format-full": "<span foreground='#bb7643'>{icon}</span> {capacity}%  ",
+        "format-charging": "<span foreground='#bb7643'></span> {capacity}%  ",
+        "format-plugged": "<span foreground='#bb7643'></span>  ",
+        "format-alt": "<span foreground='#bb7643'>{icon}</span> {time}  ",
+        "tooltip-format": "{timeTo}\n\n󰠠  Usage: {power:0.1f}W\n󱤅  Condition: {health}%\n󱍸  Total: {cycles} cycles  ",
+        "format-icons": {
+            "default": [
+                "󰂎",
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        }
+    },
+    "network": {
+        "max-length": 9,
+        "format": "<span foreground='#bb7643'></span>  up  ",
+        "format-disconnected": "  Down  "
+    },
+}

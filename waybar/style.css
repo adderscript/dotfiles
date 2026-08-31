@@ -1,0 +1,40 @@
+@import 'colors.css';
+
+* {
+    font-family: "JetBrains Mono NF", monospace;
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 0px;
+}
+
+window#waybar {
+    min-height: 0;
+
+    background-color: @background;
+    color: @foreground;
+}
+
+#workspaces {
+    margin: 0px 0px 0px 0px;
+}
+
+#workspaces button {
+    margin: 4px;
+    padding: 0px 2px;
+    color: @yellow;
+}
+
+#workspaces button.active {
+    background-color: @green;
+    color: @background;
+}
+
+#workspaces button.empty {
+    color: @foreground;
+}
+
+#workspaces button.empty.active {
+    background-color: @green;
+    color: @background;
+}

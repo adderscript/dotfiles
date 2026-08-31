@@ -1,0 +1,31 @@
+include "input.kdl"
+include "layout.kdl"
+
+spawn-at-startup "waybar"
+spawn-sh-at-startup "swaybg -i ~/.config/wallpapers/01-nature-of-fear.jpg"
+
+include "outputs.kdl"
+include "keybinds.kdl"
+
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 24
+
+    hide-when-typing
+}
+
+screenshot-path "~/art/screenshots/screenshot-from-%Y-%m-%d %H-%M-%S.png"
+
+window-rule {
+    match app-id="zen"
+    match app-id="Godot"
+    match app-id="com.bitwig.BitwigStudio"
+    match app-id="Aseprite"
+    open-maximized true
+}
+
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+    draw-border-with-background false
+}

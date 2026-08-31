@@ -1,0 +1,8 @@
+add_newline = false
+
+format = """
+$directory\
+"""
+
+[directory]
+format = '[\[$path\]━━ ━ ](bold #c9a554)'

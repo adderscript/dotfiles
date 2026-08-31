@@ -1,0 +1,44 @@
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+
+layout {
+    gaps 12
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        on
+
+        width 1
+        active-color "#d7c483"
+        inactive-color "#505050"
+    }
+
+    border {
+        off
+
+        width 1
+        active-color "#c2c2b0"
+        inactive-color "#222222"
+        urgent-color "#9b0000"
+    }
+
+    shadow {
+        // on
+        // draw-behind-window true
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+}
