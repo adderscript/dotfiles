@@ -2,14 +2,17 @@
 
 * {
     font-family: "JetBrains Mono NF", monospace;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
+
+    min-height: 20px;
 
     border-radius: 0px;
 }
 
 window#waybar {
     min-height: 0;
+    border-top: 1px solid @green;
 
     background-color: @background;
     color: @foreground;

@@ -4,6 +4,7 @@
     "position": "bottom",
     "height": 16,
     "spacing": 4,
+    "reload_on_style_change": true,
 
     // Choose the order of the modules
     "modules-left": [

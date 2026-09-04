@@ -1,0 +1,29 @@
+# global
+font=JetBrains Mono 11
+default-timeout=5000
+anchor=top-right
+layer=overlay
+
+
+# icons
+icons=1
+max-icon-size=48
+
+# colors
+text-color=#c2c2b0
+border-color=#bb7744
+background-color=#222222
+width=350
+height=150
+padding=7
+border-size=1
+outer-margin=20
+
+[app-name=Spotify]
+invisible=1
+
+[mode=do-not-disturb]
+invisible=true
+
+[mode=do-not-disturb app-name=notify-send]
+invisible=false
