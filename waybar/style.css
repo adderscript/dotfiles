@@ -2,24 +2,41 @@
 
 * {
     font-family: "JetBrains Mono NF", monospace;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
 
     min-height: 20px;
-
     border-radius: 0px;
 }
 
 window#waybar {
     min-height: 0;
-    border-top: 1px solid @green;
+    margin-bottom: 0px;
 
-    background-color: @background;
+    background-color: transparent;
     color: @foreground;
 }
 
-#workspaces {
-    margin: 0px 0px 0px 0px;
+.modules-left {
+    padding: 0px 2px;
+
+    border: 1px solid @green;
+    background-color: alpha(@background, 0.925);
+}
+
+.modules-right {
+    padding: 0px 2px;
+    padding-left: 8px;
+
+    border: 1px solid @green;
+    background-color: alpha(@background, 0.925);
+}
+
+#mpris {
+    padding: 0px 8px;
+
+    border: 1px solid @green;
+    background-color: alpha(@background, 0.925);
 }
 
 #workspaces button {

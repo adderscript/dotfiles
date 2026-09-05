@@ -41,3 +41,8 @@ layout {
         color "#00000099"
     }
 }
+
+blur {
+    offset 2.0
+    passes 1
+}

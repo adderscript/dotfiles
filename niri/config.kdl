@@ -29,4 +29,16 @@ window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
     draw-border-with-background false
+
+    background-effect {
+        blur true
+    }
+}
+
+layer-rule {
+    match namespace="^launcher$"
+
+    background-effect {
+        blur true
+    }
 }

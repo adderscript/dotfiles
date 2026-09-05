@@ -1,9 +1,12 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "height": 16,
-    "spacing": 4,
+    "spacing": 0,
+    "margin": "3px 3px 0px 3px",
+    "exclusive": false,
+    "passthrough": true,
     "reload_on_style_change": true,
 
     // Choose the order of the modules
@@ -11,6 +14,7 @@
         "niri/workspaces",
     ],
     "modules-center": [
+        "mpris",
     ],
     "modules-right": [
         "network",
@@ -18,6 +22,32 @@
         "clock",
     ],
 
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "X"
+        }
+    },
+    "mpris": {
+        "format": "<span foreground='#bb7643'>{player_icon}</span>  {title}",
+        "max-length": 40,
+
+        "player-icons": {
+            "default": "",
+            "spotify": "",
+            "firefox": "",
+            "vlc": "󰕼"
+        }
+    },
     "clock": {
         "format": "<span foreground='#bb7643'></span> {:%H:%M} "
     },
