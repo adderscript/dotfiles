@@ -17,11 +17,18 @@ cursor {
 
 screenshot-path "~/art/screenshots/screenshot-from-%Y-%m-%d %H-%M-%S.png"
 
+output "eDP-1" {
+    hot-corners {
+        off
+    }
+}
+
 window-rule {
     match app-id="zen"
+    match app-id="vesktop"
     match app-id="Godot"
-    match app-id="com.bitwig.BitwigStudio"
     match app-id="Aseprite"
+    match app-id="com.bitwig.BitwigStudio"
     open-maximized true
 }
 
