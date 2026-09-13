@@ -6,3 +6,4 @@ $directory\
 
 [directory]
 format = '[\[$path\]━━ ━ ](bold #c9a554)'
+truncation_length = 5
