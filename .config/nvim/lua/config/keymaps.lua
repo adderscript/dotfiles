@@ -11,6 +11,7 @@ vim.keymap.set("n", "<leader>r", function()
     odin = "odin run .",
     rust = "cargo run",
     cs = "dotnet run",
+    lua = "love .",
   }
 
   local cmd = commands[ft]

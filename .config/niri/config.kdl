@@ -33,6 +33,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="miniquad-application"
+    open-floating true
+}
+
+window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
     draw-border-with-background false
