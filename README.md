@@ -2,6 +2,7 @@
 
 ## Dependencies:
 Make sure to install: ```niri mako fuzzel alacritty tmux waybar starship zshell zoxide```
+
 Optional but recommended: ```neovim fastfetch```
 
 ## To install:
