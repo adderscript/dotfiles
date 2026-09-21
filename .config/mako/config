@@ -16,7 +16,7 @@ width=350
 height=150
 padding=7
 border-size=1
-outer-margin=3
+outer-margin=0
 
 [app-name=Spotify]
 invisible=1

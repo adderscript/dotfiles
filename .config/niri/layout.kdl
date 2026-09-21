@@ -2,8 +2,6 @@ hotkey-overlay {
     skip-at-startup
 }
 
-prefer-no-csd
-
 layout {
     gaps 12
     center-focused-column "never"
@@ -15,34 +13,4 @@ layout {
     }
 
     default-column-width { proportion 0.5; }
-
-    focus-ring {
-        off
-
-        width 1
-        active-color "#78824b"
-        inactive-color "#505050"
-    }
-
-    border {
-        on
-
-        width 1
-        active-color "#78824b"
-        inactive-color "#43492a"
-        urgent-color "#9b0000"
-    }
-
-    shadow {
-        on
-        softness 10
-        spread 3
-        offset x=0 y=2
-        color "#00000099"
-    }
-}
-
-blur {
-    offset 2.0
-    passes 1
 }

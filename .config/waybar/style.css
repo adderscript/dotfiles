@@ -1,4 +1,4 @@
-@import 'colors.css';
+@import '../theme/current/waybar.css';
 
 * {
     font-family: "JetBrains Mono NF", monospace;

@@ -1,5 +1,6 @@
 include "input.kdl"
 include "layout.kdl"
+include "~/.config/theme/current/niri.kdl"
 
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
