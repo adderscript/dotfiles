@@ -29,6 +29,7 @@ window-rule {
     match app-id="Godot"
     match app-id="Aseprite"
     match app-id="com.bitwig.BitwigStudio"
+    match app-id="dev.zed.Zed"
     open-maximized true
 }
 
