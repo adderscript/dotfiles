@@ -16,3 +16,8 @@ insert = "bar"
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
+
+[keys.normal]
+C-s = ":w"
+S-h = ":bp"
+S-l = ":bn"

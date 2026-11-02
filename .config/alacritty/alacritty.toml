@@ -5,7 +5,7 @@ opacity = 0.925
 
 [font]
 normal = { family = "JetBrainsMono NF" }
-size = 11
+size = 10
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
