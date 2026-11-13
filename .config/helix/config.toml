@@ -21,3 +21,6 @@ cursor-line = "warning"
 C-s = ":w"
 S-h = ":bp"
 S-l = ":bn"
+
+[keys.insert]
+C-s = [":w", "normal_mode"]

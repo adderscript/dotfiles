@@ -1,0 +1,3 @@
+[[language]]
+name = "astro"
+indent = { tab-width = 4, unit = "    " }
