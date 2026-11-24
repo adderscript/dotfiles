@@ -1,4 +1,4 @@
-theme = "gruvbox-material"
+theme = "everforest_dark"
 
 [editor]
 bufferline = "always"

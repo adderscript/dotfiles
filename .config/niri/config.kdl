@@ -3,7 +3,7 @@ include "layout.kdl"
 
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
-spawn-sh-at-startup "swaybg -i ~/wallpapers/01-nature-of-fear.jpg"
+spawn-sh-at-startup "swaybg -i ~/wallpapers/forest-stairs.jpg"
 
 include "outputs.kdl"
 include "keybinds.kdl"

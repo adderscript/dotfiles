@@ -5,8 +5,9 @@ hotkey-overlay {
 prefer-no-csd
 
 layout {
-    gaps 12
+    gaps 8
     center-focused-column "never"
+    background-color "#660000"
 
     preset-column-widths {
         proportion 0.33333
@@ -18,31 +19,32 @@ layout {
 
     focus-ring {
         off
-
-        width 1
-        active-color "#78824b"
-        inactive-color "#505050"
     }
 
     border {
         on
 
-        width 1
-        active-color "#78824b"
-        inactive-color "#43492a"
+        width 1.5
+        active-color "#a7c080"
+        inactive-color "#444b6a"
         urgent-color "#9b0000"
     }
 
     shadow {
-        on
+        off
         softness 10
         spread 3
         offset x=0 y=2
-        color "#00000099"
+        color "#00000077"
     }
+}
+
+overview {
+    backdrop-color "#2b3339"
 }
 
 blur {
     offset 2.0
-    passes 1
+    passes 2
 }
+

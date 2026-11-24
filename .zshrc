@@ -1,6 +1,7 @@
-alias ls="ls --color=auto"
+alias ls='lsd'
+alias grep='grep --color=auto'
 
-autoload -U compinit && compinit
+# Environment
+export EDITOR="helix"
 
 eval "$(starship init zsh)"
-eval "$(zoxide init --cmd cd zsh)"

@@ -1,87 +1,72 @@
-// -*- mode: jsonc -*-
+//-*- mode: jsonc -*-
 {
-    "layer": "top",
-    "position": "bottom",
-    "height": 16,
-    "spacing": 0,
-    "margin": "3px 3px 3px 3px",
-    "exclusive": false,
-    "passthrough": true,
-    "reload_on_style_change": true,
+    "layer": "top", 
+    "position": "top", 
+    "height": 30, 
+    "spacing": 4, 
 
     // Choose the order of the modules
     "modules-left": [
         "niri/workspaces",
     ],
     "modules-center": [
-        "mpris",
     ],
+
     "modules-right": [
+        "custom/sep",
         "network",
+        "custom/sep",
         "battery",
+        "custom/sep",
         "clock",
     ],
 
-    "niri/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "1": "I",
-            "2": "II",
-            "3": "III",
-            "4": "IV",
-            "5": "V",
-            "6": "VI",
-            "7": "VII",
-            "8": "VIII",
-            "9": "IX",
-            "10": "X"
-        }
+    "ext/window" : {
+        "max-length": 10,
+        "seperate-outputs": false
     },
-    "mpris": {
-        "format": "<span foreground='#bb7643'>{player_icon}</span>  {title}",
-        "max-length": 40,
-
-        "player-icons": {
-            "default": "",
-            "spotify": "",
-            "firefox": "",
-            "vlc": "󰕼"
-        }
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
     },
     "clock": {
-        "format": "<span foreground='#bb7643'></span> {:%H:%M} "
+        "format": " {:%Y-%m-%d    %H:%M}",
     },
     "battery": {
-        "interval": 60,
         "states": {
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "<span foreground='#bb7643'>{icon}</span> {capacity}%  ",
-        "format-full": "<span foreground='#bb7643'>{icon}</span> {capacity}%  ",
-        "format-charging": "<span foreground='#bb7643'></span> {capacity}%  ",
-        "format-plugged": "<span foreground='#bb7643'></span>  ",
-        "format-alt": "<span foreground='#bb7643'>{icon}</span> {time}  ",
-        "tooltip-format": "{timeTo}\n\n󰠠  Usage: {power:0.1f}W\n󱤅  Condition: {health}%\n󱍸  Total: {cycles} cycles  ",
-        "format-icons": {
-            "default": [
-                "󰂎",
-                "󰁺",
-                "󰁻",
-                "󰁼",
-                "󰁽",
-                "󰁾",
-                "󰁿",
-                "󰂀",
-                "󰂁",
-                "󰂂",
-                "󰁹"
-            ]
-        }
+        "format": "{icon}  {capacity}%",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{icon}  {capacity}%",
+        "format-time": "{H}:{M}",
+        "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        "max-length": 9,
-        "format": "<span foreground='#bb7643'></span>  up  ",
-        "format-disconnected": "  Down  "
+        "format": "  wifi-ed",
+        "format-disconnected": "disconnected"
     },
+
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "Mem: {used}GiB"
+    },
+    "disk": {
+        "interval": 60,
+        "path": "/",
+        "format": "Disk: {free}"
+    },
+    "custom/sep": {
+        "format": "|",
+        "interval": 999
+    }
 }
